@@ -124,7 +124,7 @@ USE_TZ = True
 AWS_ACCESS_KEY_ID = 'IAUPWAMETMXUSMDU3BI3'
 AWS_SECRET_ACCESS_KEY = 'ZKn1mmz2OKoR8YIfz7ypYjANJK/YtuVTHP59/zl5lZA'
 AWS_STORAGE_BUCKET_NAME = 'cdn-dhakalaashish.com.np	'
-AWS_S3_ENDPOINT_URL = 'sgp1.digitaloceanspaces.com'
+AWS_S3_ENDPOINT_URL = 'https://sgp1.digitaloceanspaces.com'
 AWS_S3_OBJECT_PARAMETERS = {
     'CacheControl': 'max-age=86400',
 }
