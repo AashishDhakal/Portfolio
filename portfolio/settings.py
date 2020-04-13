@@ -26,9 +26,9 @@ MEDIA_ROOT = os.path.join(BASE_DIR,"media")
 SECRET_KEY = '^3far-ppbpep5j%&ms%5=(w@3t98%o&4zus&74jggduyv5quxb'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['dhakalasshish.com.np','www.dhakalaashish.com.np']
+ALLOWED_HOSTS = ['127.0.0.1','dhakalasshish.com.np','www.dhakalaashish.com.np']
 
 
 # Application definition
