@@ -1,0 +1,27 @@
+version: 0.0
+os: linux
+files:
+  - source: /portfolio/
+    destination: /var/www/portfolio/
+permissions:
+  - object: /var/www/portfolio
+    pattern: "**"
+    owner: entrancesewa
+    group: entrancesewa
+hooks:
+  AfterInstall:
+    - location: scripts/install_dependencies
+      timeout: 1000
+      runas: root
+    - location: scripts/create_enviroment
+      timeout: 1000
+      runas: entrancesewa
+  ApplicationStart:
+    - location: scripts/start_server
+      timeout: 1000
+      runas: root
+  ApplicationStop:
+    - location: scripts/stop_server
+      timeout: 1000
+      runas: root
+
