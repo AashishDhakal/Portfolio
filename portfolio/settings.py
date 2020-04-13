@@ -26,9 +26,9 @@ MEDIA_ROOT = os.path.join(BASE_DIR,"media")
 SECRET_KEY = '^3far-ppbpep5j%&ms%5=(w@3t98%o&4zus&74jggduyv5quxb'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['dhakalasshish.com.np','www.dhakalaashish.com.np']
 
 
 # Application definition
@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'core',
+    'storages',
 ]
 
 MIDDLEWARE = [
@@ -120,9 +121,20 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
+AWS_ACCESS_KEY_ID = 'IAUPWAMETMXUSMDU3BI3'
+AWS_SECRET_ACCESS_KEY = 'ZKn1mmz2OKoR8YIfz7ypYjANJK/YtuVTHP59/zl5lZA'
+AWS_STORAGE_BUCKET_NAME = 'cdn-dhakalaashish.com.np	'
+AWS_S3_ENDPOINT_URL = 'sgp1.digitaloceanspaces.com'
+AWS_S3_OBJECT_PARAMETERS = {
+    'CacheControl': 'max-age=86400',
+}
+AWS_LOCATION = 'portfolio'
+
 STATICFILES_DIRS = [
     STATIC_DIR,
 ]
 
-STATIC_URL = '/static/'
-MEDIA_URL = '/media/'
+STATIC_URL = 'https://%s/%s/' % (AWS_S3_ENDPOINT_URL, AWS_LOCATION)
+STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+
+DEFAULT_FILE_STORAGE = 'portfolio.storage_backends.MediaStorage'
