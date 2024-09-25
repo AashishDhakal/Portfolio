@@ -44,7 +44,7 @@ function new_line(){
   p.setAttribute("class", "path")
   p.textContent = "# user";
   span1.textContent = " in";
-  span2.textContent = " ~/heber-leonard";
+  span2.textContent = " ~/dhakalcodes";
   p.appendChild(span1);
   p.appendChild(span2);
   app.appendChild(p);
@@ -79,18 +79,18 @@ async function getInputValue(){
   }
   else if(value === "projects"){
     trueValue(value);
-    createText("<a href='https://github.com/heberleonard2' target='_blank'><i class='fab fa-github white'></i> github.com/heberleonard2</a>")
+    createText("<a href='https://github.com/AashishDhakal' target='_blank'><i class='fab fa-github white'></i> github.com/AashishDhakal</a>")
   }
   else if(value === "about me"){
     trueValue(value);
-    createText("Oi, meu nome é Héber ;)")
-    createText("Desenvolvedor atualmente focado em todo o ecossistema Javascript. Utilizando principalmente a stack <span class='blue'>Node, React e React Native </span>por permitir criar aplicações de forma descomplicada e produtiva.")
+    createText("hi, my name is Aashish ;)")
+    createText("Developer currently focussed on the entire Python ecosystem. Utilizing mainly the stack <span class='blue'>Django, Django Rest Framework, Flask and FastAPI </span> to create applications in uncomplicated and productive way.")
   }
   else if(value === "social -a"){
     trueValue(value);
-    createText("<a href='https://github.com/heberleonard2' target='_blank'><i class='fab fa-github white'></i> github.com/heberleonard2</a>")
-    createText("<a href='https://www.linkedin.com/in/heber-leonard/' target='_blank'><i class='fab fa-linkedin-in white'></i> linkedin.com/in/heber-leonard</a>")
-    createText("<a href='https://www.instagram.com/heber_leonard/' target='_blank'><i class='fab fa-instagram white'></i> instagram.com/heber_leonard</a>")
+    createText("<a href='https://github.com/AashishDhakal' target='_blank'><i class='fab fa-github white'></i> github.com/AashishDhakal</a>")
+    createText("<a href='https://www.linkedin.com/in/aashish-dhakal/' target='_blank'><i class='fab fa-linkedin-in white'></i> linkedin.com/in/aashish-dhakal</a>")
+    createText("<a href='https://www.instagram.com/__aashish__dhakal/' target='_blank'><i class='fab fa-instagram white'></i> instagram.com/__aashish__dhakal</a>")
   }
   else if(value === "social"){
     trueValue(value);
